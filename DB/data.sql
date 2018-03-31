@@ -33,20 +33,20 @@ insert into products
 values('Grandstream DP720', 'Expansion Handset', 'Cordless 10-line phone with speakerphone|A VoIP phone that allows users to mobilize their network|Includes support for SIP accounts','55.00', 0, 'grandstreamDP720.png');
 --telephony
 insert into products
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 1, '.png');
+values('Plantronics M 214C', 'On-Ear Headset', 'Multicolored wired noise canceling headset|Comfortable and affordable with an inline microphone|Convenient volume and mute controls', '20.49', 1, 'plantronicsM214C.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 1, '.png');
+values('Jabra BT2046', 'Wireless Earbud Headset', 'Easily paired with mobile and practical to use|New and improved look|Comfortable ear hook design makes it easy to wear all day long', '24.99', 1, 'jabraBT2046.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 1, '.png');
+values('Plantronics Ear Cushions', '6 Pack Black Ear Cushions', 'Useable for all plantronics earbud products|Simple to replace and install|Very affordable for mult-person use in the office', '3.89', 1, 'plantronicsEarCushion.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 1, '.png');
+values('Bose Audio Cable', 'Replacement Black Audio Cable', '4 Foot audio cable designed for Bose products|Durable design means this cable with stand the test of time|Sleek black look for all devices', '6.95', 1, 'boseAudioCable.png');
 											   
 --av										   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 2, '.png');
+values('Cicso Pager', 'Invisable Clock Pager', 'Combines the functions of a clock and a pager in one|Especially usful to the hearing impaired|Also helpful for people with ADD or ADHD that need pagers', '47.74', 2, 'ciscoPager.png');
 											   
 insert into products						   
 values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 2, '.png');
