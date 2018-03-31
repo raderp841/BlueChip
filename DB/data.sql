@@ -49,26 +49,26 @@ insert into products
 values('Cicso Pager', 'Invisable Clock Pager', 'Combines the functions of a clock and a pager in one|Especially usful to the hearing impaired|Also helpful for people with ADD or ADHD that need pagers', '47.74', 2, 'ciscoPager.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 2, '.png');
+values('Valcom V-2003A', 'Category Paging Product', 'Accepts Pulse Dial and Tone Dial Background Music|Night Ring Time Clock Tone Door Bell Page Override|Ground-Start Trunk Port Electronic', '75.81', 2, 'valcomV2003A.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 2, '.png');
+values('Logitech MeetUp Kit', 'Premier Conferencecam Video Kit', 'Captures 120 fov 4k optics|Exceptional audio performance|Delivers an unsurpassed small room experience', '1020.99', 2, 'logitectMeetup.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 2, '.png');
+values('143 Beeper', 'Beeper/Pager Pin', 'Rubber clutch for maximum hold|Black nickel metal base |1.0" soft enamel pin', '10.00', 2, '143Beeper.png');
 											   
 --security									   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 3, '.png');
+values('Nest Cam', '3 MegaPixel 1080p Security Camera', 'Streams securely to your phone|Motion sensing with 130 degree field of view|Nightvision LED sensors let you see the whole room', '129.99', 3, 'nestCam.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 3, '.png');
+values('Lorex Security System', 'System with 1080p Dome Cameras', 'True high definition 1080p recording on all cameras|H.264 video compression|Accurate time stamps with NTP & daylight savings time', '799.99', 3, 'lorexSecurity.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 3, '.png');
+values('LM-8 Camera', 'Hidden Camera & Bug Detector', 'Is perfect for frequent travelers|Can also detect wireless microphones|Very wide 2MHz-6GHz frequency range', '149.99', 3, 'LM-8.png');
 											   
 insert into products						   
-values('Digium D60', 'Entry-Level HD Phone', '||', '138.98', 3, '.png');
+values('D-Link Camera', 'HD Wi-Fi Camera', '100 Degree field of view|Works in the day as well as in the night|Records up to 128GB on an SD card', '66.99', 3, 'D-LinkWiFi.png');
 											   
 --data networking							   
 insert into products						   
