@@ -1,15 +1,12 @@
 ﻿@using BlueChip.Models;
-@model List<ProductModel>
+@model ProductModel
 
 @{
     ViewBag.Title = "Home Page";
 }
 
 @{ 
-    foreach(var kvp in Model)
-    {
-        <p>@kvp.Named</p>
-    }
+    <p>@Model.LongDescription</p>
 }
 <div class="jumbotron">
     <h1>ASP.NET</h1>

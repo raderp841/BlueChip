@@ -13,12 +13,10 @@ namespace BlueChip.Controllers
 {
     public class HomeController : Controller
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
-
         public ActionResult Index()
         {
-            ProductsDAL dal = new ProductsDAL(connectionString);
-            var model = dal.GetAllProducts();
+            ProductsDAL dal = new ProductsDAL();
+            var model = dal.GetSingleProduct(3);
             return View("Index", model);
         }
 
