@@ -22,3 +22,22 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.productImage{
+    height:175px;
+    width:175px;
+    margin-bottom:50px;
+}
+
+.insideImage{
+    height:auto;
+    max-width:100%;
+}
+
+#something{
+    text-align:center;
+}
+
+.mainImages{
+    margin-top:10px;
+}

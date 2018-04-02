@@ -15,8 +15,8 @@ namespace BlueChip.Controllers
     {
         public ActionResult Index()
         {
-            ProductsDAL dal = new ProductsDAL();
-            var model = dal.GetSingleProduct(3);
+            ProductlLineDAL dal = new ProductlLineDAL();
+            var model = dal.GetAllProductLines();
             return View("Index", model);
         }
 
