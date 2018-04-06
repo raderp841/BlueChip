@@ -1,0 +1,26 @@
+﻿@using BlueChip.Models;
+@model List<ProductModel>
+
+@{
+    UserInfoModel user = Session["User"] as UserInfoModel;
+    double total = 0;
+
+}
+<div class="text-center">
+    @if (Session["User"] != null)
+    {<h2 class="text-center">@user.FirstName's Cart</h2>
+
+    foreach (var product in Model)
+    {
+        <h3>@product.Named: </h3><span>$@product.Price</span>
+        total += product.PriceDec;
+        <hr />
+    }
+    <h2>Sub Total: @total.ToString("C")</h2>
+}
+    else
+    {
+    <a class="btn btn-block" href="@Url.Action("LoginRegister", "Home")" )>Login or Register</a>
+    }
+</div>
+

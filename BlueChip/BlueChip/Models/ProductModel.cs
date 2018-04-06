@@ -14,5 +14,6 @@ namespace BlueChip.Models
         public string Price { get; set; }
         public int ProductLineId { get; set; }
         public string PictureURL { get; set; }
+        public double PriceDec { get; set; }
     }
 }

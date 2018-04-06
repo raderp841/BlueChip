@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using BlueChip.Models;
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,6 +8,8 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,19 +20,41 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Fake Jenne Inc", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Product Lines", "Index", "Home")</li>
+                    @if (Session["User"] == null)
+                    {
+                        <li>@Html.ActionLink("Login/Register", "LoginRegister", "Home")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Logout", "LogOut", "Home")</li>
+                    }
+
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
+
+        <div>
+            @{
+
+                List<ProductModel> partM = new List<ProductModel>();
+
+                if (Session["Cart"] != null)
+                {
+                    partM = Session["Cart"] as List<ProductModel>;
+                }
+
+            }
+            @{ Html.
+       RenderPartial("Cart", partM); }
+        </div>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>

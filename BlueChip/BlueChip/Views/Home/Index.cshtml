@@ -4,85 +4,24 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<div class="productLines row">
+<div class="productLines">
     @{
         for (int i = 0; i < Model.Count; i++)
         {
             var pictureUrl = "../Content/Images/" + Model[i].pictureURL;
-            <div class="col-md-4">
+            <div>
                 <div class="thumbnail mainImages">
                     <h3 class="text-center">@Model[i].Named</h3>
-                    <img src="@pictureUrl" onclick="find(@Model[i].Id)" alt="Alternate Text" />
+                    <img src="@pictureUrl" class="img-responsive" onclick="find(@Model[i].Id)" alt="Alternate Text" />
                 </div>
             </div>
         }
     }
 </div>
-<div id="something" class="row"></div>
+<div id="products"></div>
 <br />
 <button class="btn" id="showProductLines" onclick="showProductLines()">Back</button>
+<hr />
+
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-<script>
-    var uri = '../api/products';
-
-    $(document).ready(function () {
-        $('#showProductLines').hide();
-    });
-
-    function formatItem(item) {
-
-        return item.Named + ': $' + item.Price;
-    }
-
-    function find(id) {
-        $.getJSON(uri + '/' + id)
-            .done(function (data) {
-
-                $.each(data, function (key, item) {
-                    var ul = $('#something');
-                    $('<div>',
-                        { 'class': 'col-md-4 productImage'})
-                        .appendTo($('#something'));
-
-                    $('<div>',
-                        {
-                            text: formatItem(item),
-                            "class":"thumbnail"
-                        })
-                        .appendTo($(ul).children().last());
-
-                  
-                    $('<img>',
-                        {
-                            "src": "../Content/Images/" + item.PictureURL,
-                            "class": "insideImage"
-                        })
-                        .appendTo($(ul).children().children().last());
-
-
-
-                    $('<button>',
-                        {
-                            text: 'Add to Cart',
-                            'class': 'btn btn-success',
-                            'click': function () {
-                                console.log(item.Id);
-                            }
-                        })
-                        .appendTo($(ul).children().last());
-
-                });
-
-            });
-        $('.productLines').hide();
-        $('#showProductLines').show();
-    };
-    function showProductLines() {
-        $('#showProductLines').hide();
-        $('.productLines').show();
-        $('#something').empty();
-    };
-
-
-
-</script>
+<script src="~/Js/JavaScript.js"></script>

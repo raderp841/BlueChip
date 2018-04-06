@@ -23,21 +23,44 @@ textarea {
     max-width: 280px;
 }
 
-.productImage{
-    height:175px;
-    width:175px;
-    margin-bottom:50px;
+.productImage {
+    
+     width:200px; 
+    /* margin-bottom:50px; */
+    margin: 0 auto;
+    text-align: center;
 }
 
-.insideImage{
-    height:auto;
-    max-width:100%;
+.insideImage {
+    /* height:auto; */
+    max-width: 100%;
 }
 
-#something{
-    text-align:center;
+
+
+.mainImages {
+    margin-top: 10px;
 }
 
-.mainImages{
-    margin-top:10px;
+
+
+.productLines {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+.productImage div {
+    height: 225px;
+}
+
+@media (max-width: 600px) {
+    .productLines {
+        grid-template-columns: 1fr 1fr;
+    }
 }
