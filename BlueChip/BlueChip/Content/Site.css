@@ -64,3 +64,8 @@ textarea {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+.deleteItem{
+    float:right;
+    color: red;
+}
