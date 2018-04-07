@@ -16,8 +16,12 @@ namespace BlueChip.Controllers
         private const int Register = 0;
         private const int Login = 1;
 
-        public ActionResult Index()
+        public ActionResult Index(bool redirect = true)
         {
+            if (redirect)
+            {
+                return RedirectToAction("Cart");
+            }
             ProductlLineDAL dal = new ProductlLineDAL();
             var model = dal.GetAllProductLines();
             return View("Index", model);
@@ -82,19 +86,7 @@ namespace BlueChip.Controllers
             return View("LoginRegister");
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+      
 
         public ActionResult Cart()
         {
@@ -112,7 +104,7 @@ namespace BlueChip.Controllers
                 product.PriceDec = Convert.ToDouble(product.Price);
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { redirect = false });
         }
 
         public ActionResult SaveItemForUser(int productId)

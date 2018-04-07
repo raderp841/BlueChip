@@ -68,4 +68,5 @@ textarea {
 .deleteItem{
     float:right;
     color: red;
+    cursor: pointer;
 }

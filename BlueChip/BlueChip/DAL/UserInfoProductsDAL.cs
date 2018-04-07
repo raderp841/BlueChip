@@ -83,7 +83,7 @@ namespace BlueChip.DAL
                 {
                     conn.Open();
 
-                    SqlCommand cmd = new SqlCommand(SQL_GetProductsForUser, conn);
+                    SqlCommand cmd = new SqlCommand(SQL_RemoveProductForUser, conn);
                     cmd.Parameters.AddWithValue("@userInfoId", userInfoId);
                     cmd.Parameters.AddWithValue("@productsId", productId);
 
