@@ -136,5 +136,15 @@ namespace BlueChip.Controllers
         {
             return View("YouCube");
         }
+
+        public ActionResult About()
+        {
+            return View("Index");
+        }
+
+        public ActionResult Contact()
+        {
+            return View("Index");
+        }
     }
 }
