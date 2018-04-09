@@ -2,28 +2,37 @@
 var price;
 var totalPrice;
 var cartUri = '../api/cart/';
+var shoppingCartImage = $("#emptyShoppingCart");
 
 $(document).ready(function () {
     cartList.hide();
     $('.deleteItem').click(function () {
-        $(this).parent().remove();
-        getCount();
+        var item = $(this).parent();
+        $(this).parent().slideUp(500, function () {
+            item.remove();
+            getCount();
+        });
     });
 });
 
 function showCart() {
-    cartList.show();
     $("#showCart").hide();
+    $("#emptyShoppingCart").fadeOut(1000, function () {
+        cartList.fadeIn(1000);
+    });
+
+
+
 };
 
 function hideCart() {
-    cartList.hide();
-    $("#showCart").show();
+    cartList.fadeOut(1000, function () {
+        $("#showCart").fadeIn(1000);
+        shoppingCartImage.fadeIn(1000);
+    });
 }
 
 function deleteItem(productId, userId, price) {
-    console.log(productId);
-    console.log(userId);
     getTotalPrice();
     console.log(totalPrice);
     changeSub(price);

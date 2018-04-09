@@ -64,3 +64,7 @@ function showProductLines() {
     $('.productLines').show();
     $('#products').empty();
 };
+
+function flipCard() {
+    $(this).flip();
+};

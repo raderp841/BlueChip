@@ -131,5 +131,10 @@ namespace BlueChip.Controllers
 
             return RedirectToAction("LoginRegister");
         }
+
+        public ActionResult YouCube()
+        {
+            return View("YouCube");
+        }
     }
 }
