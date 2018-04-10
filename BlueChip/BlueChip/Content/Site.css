@@ -78,10 +78,23 @@ textarea {
    
 }
 
+#shoppingCart{
+    width: 50%;
+    margin:auto;
+}
+
 #cart-product {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    margin:auto;
     border: 1px solid lightgrey;
-    border-radius:20px;
+    align-items:center;
+
+}
+
+.validation {
+    text-align: center;
+    margin:auto;
+    width: 20%;
+    color: tomato;
 }

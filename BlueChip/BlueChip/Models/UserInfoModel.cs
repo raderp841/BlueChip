@@ -21,7 +21,7 @@ namespace BlueChip.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Enter Your Password")]
-        [RegularExpression(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", ErrorMessage = "Incorrect password format")]
+        [RegularExpression(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", ErrorMessage = "Password must be at leat 8 characters long, have an upper and lowercase letter, a number and a symbol")]
 
         public string Password { get; set; }
         public string PasswordSalt { get; set; }
